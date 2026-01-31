@@ -34,11 +34,14 @@ function App() {
               <Route path="/data" element={<DataSet />} />
               <Route path="/create-jobs" element={<Job />} />
               <Route path="/jobs" element={<JobsTable />} />
-              <Route path="/train" element={<div>Train</div>} />
-              <Route path="/deploy" element={<div>Deploy</div>} />
-              <Route path="/mobile" element={<div>Mobile</div>} />
+              <Route path="/" element={<div>Under Development</div>} />
+              <Route path="/train" element={<div>Under Development</div>} />
+              <Route path="/deploy" element={<div>Under Development</div>} />
+              <Route path="/mobile" element={<div>Under Development</div>} />
             </Route>
+           <Route path="*" element={<Navigate to="/login" replace />} />
           </Routes>
+
         </div>
       </div>
     </div>
