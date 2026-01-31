@@ -1,0 +1,125 @@
+@import url("https://fonts.cdnfonts.com/css/amazon-ember");
+
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lato:wght@100;300;400;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&family=Roboto:wght@100;300;400;500;700;900&family=Tinos:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@400;600;700&family=Lato:wght@100;300;400;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&family=Roboto:wght@100;300;400;500;700;900&family=Tinos:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@400;600;700&family=Lato:wght@100;300;400;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Tinos:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Crimson+Pro:ital,wght@1,500;1,600;1,700;1,800;1,900&family=Inter:wght@400;600;700&family=Lato:wght@100;300;400;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Tinos:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Crimson+Pro:ital,wght@1,500;1,600;1,700;1,800;1,900&family=Inter:wght@400;600;700&family=Lato:wght@100;300;400;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Rowdies&family=Tinos:wght@400;700&display=swap"); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dropzone {
+  border: 1px dashed #545b64;
+  border-radius: 2px;
+  background: #fafafa;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+.dropzone_dark {
+  border: 1px dashed #545b64;
+  border-radius: 2px;
+  background: #21252c;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.no-border-dark,
+.no-border-light {
+  border: none !important;
+  box-shadow: none !important;
+}
+/* light audio */
+.no-border-light .rhap_progress-section .rhap_time {
+  border: none !important;
+  box-shadow: none !important;
+  font-family: "Amazon Ember";
+  color: #545b64;
+  font-size: 12px;
+}
+
+.no-border-light .rhap_main-controls-button svg {
+  color: #545b64;
+  font-size: 22px;
+}
+
+.no-border-light .rhap_volume-bar {
+  background-color: #545b64;
+  font-size: 12px;
+  height: 1px !important;
+}
+.no-border-light .rhap_button-clear.rhap_volume-button {
+  color: #545b64 !important;
+  font-size: 18px;
+}
+.no-border-light .rhap_progress-indicator {
+  background-color: #71717a !important;
+  font-size: 10px !important;
+  width: 2px;
+  height: 15px;
+}
+.no-border-light .rhap_progress-bar-show-download {
+  height: 1px !important;
+}
+/* dark audio */
+
+.no-border-dark .rhap_progress-section .rhap_time {
+  border: none !important;
+  box-shadow: none !important;
+  font-family: "Amazon Ember";
+  color: #d5dbdb;
+  font-size: 12px;
+}
+
+.no-border-dark .rhap_main-controls-button svg {
+  color: #545b64;
+  font-size: 22px;
+}
+
+.no-border-dark .rhap_volume-bar {
+  background-color: #d5dbdb;
+  font-size: 12px;
+  height: 1px !important;
+}
+.no-border-dark .rhap_button-clear.rhap_volume-button {
+  color: #d5dbdb !important;
+  font-size: 18px;
+}
+.no-border-dark .rhap_progress-indicator {
+  background-color: #d5dbdb !important;
+  font-size: 10px !important;
+  width: 4px;
+}
+
+.no-border-dark .rhap_progress-bar-show-download {
+  height: 0.5px !important;
+}
+/*  all audio*/
+
+.rhap_progress-section {
+  height: 0px !important;
+}
+.rhap_controls-section {
+  margin-bottom: 0px !important;
+}
+
+.rhap_main-controls-button {
+  /* font-size: 110px; */
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.rhap_button-clear.rhap_repeat-button {
+  font-size: 18px;
+}
