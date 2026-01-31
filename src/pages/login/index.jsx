@@ -9,12 +9,12 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!email || !password) {
-      setError("Please fill in both fields");
-      return;
+    if (email === "kavidudharmasiri90@gmail.com" && password === "WinstonK123") {
+      localStorage.setItem("isAuthenticated", "true");
+      navigate("/");
+    } else {
+      setError("Invalid email or password");
     }
-    // Simple mock validation: succeed if fields are not empty
-    navigate("/");
   };
 
   return (

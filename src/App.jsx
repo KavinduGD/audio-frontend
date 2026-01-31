@@ -7,6 +7,7 @@ import { useDarkModeContext } from "./hooks/use_dark_mode_context";
 import Job from "./pages/create-jobs";
 import JobsTable from "./pages/jobs";
 import Login from "./pages/login";
+import ProtectedRoute from "./components/protected_route";
 
 function App() {
   const { isDarkMode, toggleDarkMode } = useDarkModeContext();
@@ -29,12 +30,14 @@ function App() {
         >
           <Routes>
             <Route path="/login" element={<Login />} />
-            <Route path="/data" element={<DataSet />} />
-            <Route path="/create-jobs" element={<Job />} />
-            <Route path="/jobs" element={<JobsTable />} />
-            <Route path="/train" element={<div>Train</div>} />
-            <Route path="/deploy" element={<div>Deploy</div>} />
-            <Route path="/mobile" element={<div>Mobile</div>} />
+            <Route element={<ProtectedRoute />}>
+              <Route path="/data" element={<DataSet />} />
+              <Route path="/create-jobs" element={<Job />} />
+              <Route path="/jobs" element={<JobsTable />} />
+              <Route path="/train" element={<div>Train</div>} />
+              <Route path="/deploy" element={<div>Deploy</div>} />
+              <Route path="/mobile" element={<div>Mobile</div>} />
+            </Route>
           </Routes>
         </div>
       </div>
