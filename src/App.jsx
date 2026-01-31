@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
 import Sidebar from "./components/sidebar";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Navbar from "./components/navbar";
 import DataSet from "./pages/data";
 import { useDarkModeContext } from "./hooks/use_dark_mode_context";
@@ -39,9 +38,8 @@ function App() {
               <Route path="/deploy" element={<div>Under Development</div>} />
               <Route path="/mobile" element={<div>Under Development</div>} />
             </Route>
-           <Route path="*" element={<Navigate to="/login" replace />} />
+            <Route path="*" element={<Navigate to="/login" replace />} />
           </Routes>
-
         </div>
       </div>
     </div>
