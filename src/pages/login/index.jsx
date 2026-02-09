@@ -21,7 +21,7 @@ const Login = () => {
     <div className="flex items-center justify-center min-h-screen bg-[#F2F3F3] dark:bg-[#16191F] font-amazon_ember">
       <div className="w-full max-w-sm p-8 bg-white dark:bg-[#21252C] rounded shadow-[0_1px_3px_0_rgba(0,0,0,0.1)]">
         <h2 className="mb-6 text-2xl font-normal text-black dark:text-white">
-          Sign in
+          Sign in pipeline check
         </h2>
         {error && (
           <div className="mb-4 p-3 text-sm text-error_red border border-error_red rounded">
