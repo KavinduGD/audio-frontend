@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import axios from "axios";
 import {
   Table,
   TableBody,
@@ -17,6 +16,7 @@ import Slider from "@mui/material/Slider";
 import { usePreDataContext } from "../../../../hooks/use_pre_data_context";
 
 import AudioPlayer from "react-h5-audio-player";
+import admin_axios from "../../../../base_url";
 
 const header_cell_style =
   "text-light_grey dark:text-dark_grey font-semibold font-amazon_ember";
@@ -38,12 +38,9 @@ function PreAudioTable() {
     const fetchAudioFiles = async () => {
       try {
         console.log("className", className);
-        const response = await axios.post(
-          "http://127.0.0.1:5000/api/zip-data/get-all-audios",
-          {
-            class_name: className,
-          }
-        );
+        const response = await admin_axios.post("api/zip-data/get-all-audios", {
+          class_name: className,
+        });
         if (response.data.status === "success") {
           setAudioFiles(response.data.audio_files);
         }
@@ -218,7 +215,7 @@ function PreAudioTable() {
                       <span className={row_cell_style}>
                         {audioMetadata[index]?.duration
                           ? `${Math.floor(
-                              audioMetadata[index].duration / 60
+                              audioMetadata[index].duration / 60,
                             )}:${Math.floor(audioMetadata[index].duration % 60)
                               .toString()
                               .padStart(2, "0")}`
